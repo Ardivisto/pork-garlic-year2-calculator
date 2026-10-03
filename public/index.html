@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pork &amp; Garlic Ice Cream — Year 2 Strategy Calculator</title>
+  <meta name="description" content="Compare winter production strategies, cash requirements, and sales uncertainty using the Year 1 workbook.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23172433'/%3E%3Cpath d='M7 24V15h4v9m3 0V10h4v14m3 0V6h4v18' stroke='%2398edce' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <header class="masthead"><div class="brand"><span class="brandmark" aria-hidden="true">P&amp;G</span><div><span class="eyebrow">PORK &amp; GARLIC ICE CREAM</span><h1>Year 2 Strategy Calculator</h1></div></div><div class="header-actions"><span id="save-status" role="status">Saved on this browser</span><button id="reset" class="quiet">Reset inputs</button></div></header>
+  <nav aria-label="Calculator sections"><a href="#comparison">Compare strategies</a><a href="#starting">Starting position</a><a href="#rules">Prices &amp; rules</a><a href="#validation">Year 1 validation</a></nav>
+  <main>
+    <div class="notice" id="placeholder-notice"><strong>Temporary placeholders — replace with actual Year 1 autumn closing figures.</strong><span>Opening balances are zero. All Year 2 results are provisional.</span></div>
+    <section id="comparison"><div class="section-heading"><div><span class="eyebrow">WINTER / YEAR 2</span><h2>Two plans. One cash decision.</h2><p>Suggested scenarios, not company decisions. Change each plan independently.</p></div><span class="unit">All monetary values in Sh</span></div><div id="scenarios" class="scenario-grid"></div></section>
+    <section class="panel" id="financials"><div class="section-heading"><div><h2>Financial comparison</h2><p>Accounting profit and available cash tell different stories.</p></div></div><div id="financial-results"></div></section>
+    <section class="panel" id="uncertainty"><h2>What if fewer sales are allocated?</h2><p>Requested sales are not guaranteed. Production and spending stay fixed in these stress tests.</p><div id="sensitivity"></div></section>
+    <section class="panel" id="recommendation"><h2>Recommendation</h2><div id="assessment" aria-live="polite"></div><div class="two-col"><label>Your recommendation<textarea id="recommendation-text" data-path="recommendation" rows="4"></textarea></label><label>Most important assumption<textarea id="assumption-text" data-path="keyAssumption" rows="4"></textarea></label></div></section>
+    <section class="panel" id="starting"><h2>Starting position</h2><p>Enter the actual Year 1 autumn closing figures when available. Annual profit is reference-only.</p><div id="opening-inputs"></div></section>
+    <section class="panel" id="rules"><h2>Prices, options &amp; game rules</h2><p class="reference-note">Year 1 reference — unconfirmed for Year 2</p><div id="rules-inputs"></div></section>
+    <section class="panel" id="validation"><h2>Year 1 winter validation</h2><p>This historical check uses frozen source data, independent of your Year 2 inputs.</p><div id="validation-results"></div></section>
+    <footer>Sources: Year 1 workbook and participant rules. Inputs stay in this browser. The market forecast is not guaranteed company sales.</footer>
+  </main>
+  <dialog id="reset-dialog"><h2>Reset all inputs?</h2><p>This restores the suggested scenarios, Year 1 reference prices, and zero starting balances. Your locally saved edits will be removed.</p><div class="dialog-actions"><button id="cancel-reset" class="quiet">Keep my inputs</button><button id="confirm-reset">Reset all inputs</button></div></dialog>
+</body>
+</html>
