@@ -1,0 +1,13 @@
+{
+  "name": "pork-garlic-year2-calculator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test": "node tests/model.test.mjs",
+    "build": "node scripts/check.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
